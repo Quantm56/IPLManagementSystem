@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ManageTeamsController"
+            style="-fx-background-color: #0b0b0b;">
+
+    <top>
+        <VBox spacing="16" style="-fx-background-color: #111111;">
+            <padding>
+                <Insets top="20" right="25" bottom="20" left="25"/>
+            </padding>
+
+            <Label text="Manage Teams"
+                   style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <HBox spacing="12">
+                <TextField fx:id="teamIdField"
+                           promptText="Team ID"
+                           style="-fx-background-color:#1f1f1f; -fx-text-fill:white; -fx-prompt-text-fill:#8c8c8c; -fx-background-radius:10;"/>
+
+                <TextField fx:id="teamNameField"
+                           promptText="Team Name"
+                           style="-fx-background-color:#1f1f1f; -fx-text-fill:white; -fx-prompt-text-fill:#8c8c8c; -fx-background-radius:10;"/>
+
+                <TextField fx:id="coachField"
+                           promptText="Coach"
+                           style="-fx-background-color:#1f1f1f; -fx-text-fill:white; -fx-prompt-text-fill:#8c8c8c; -fx-background-radius:10;"/>
+
+                <TextField fx:id="captainField"
+                           promptText="Captain"
+                           style="-fx-background-color:#1f1f1f; -fx-text-fill:white; -fx-prompt-text-fill:#8c8c8c; -fx-background-radius:10;"/>
+
+                <TextField fx:id="venueIdField"
+                           promptText="Venue ID"
+                           style="-fx-background-color:#1f1f1f; -fx-text-fill:white; -fx-prompt-text-fill:#8c8c8c; -fx-background-radius:10;"/>
+
+                <Button text="Add"
+                        onAction="#handleAddTeam"
+                        style="-fx-background-color:#00e676; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10;"/>
+
+                <Button text="Back"
+                        onAction="#goBack"
+                        style="-fx-background-color:#2b2b2b; -fx-text-fill:white; -fx-background-radius:10;"/>
+            </HBox>
+
+            <Label fx:id="statusLabel"
+                   style="-fx-text-fill:#ff5252;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background:#0b0b0b;">
+            <content>
+                <VBox fx:id="teamContainer" spacing="18" style="-fx-background-color:#0b0b0b;">
+                    <padding>
+                        <Insets top="20" right="25" bottom="20" left="25"/>
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

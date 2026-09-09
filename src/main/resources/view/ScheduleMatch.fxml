@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ScheduleMatchController"
+      alignment="CENTER"
+      spacing="14"
+      style="-fx-background-color: linear-gradient(to bottom, #0b0b0b, #161616);">
+
+    <padding>
+        <Insets top="35" right="40" bottom="35" left="40"/>
+    </padding>
+
+    <Label text="Schedule Match"
+           style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <ComboBox fx:id="team1Box" promptText="Select Team 1" maxWidth="320"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white;"/>
+    <ComboBox fx:id="team2Box" promptText="Select Team 2" maxWidth="320"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white;"/>
+    <ComboBox fx:id="venueBox" promptText="Select Venue" maxWidth="320"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white;"/>
+    <DatePicker fx:id="matchDatePicker" maxWidth="320"
+                style="-fx-background-color: #1f1f1f;"/>
+
+    <Button text="Schedule"
+            onAction="#handleSchedule"
+            maxWidth="320"
+            style="-fx-background-color: #ffca28; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+    <Button text="Back"
+            onAction="#goBack"
+            maxWidth="320"
+            style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+    <Label fx:id="statusLabel"
+           maxWidth="320"
+           wrapText="true"
+           style="-fx-text-fill: #ff5252;"/>
+</VBox>

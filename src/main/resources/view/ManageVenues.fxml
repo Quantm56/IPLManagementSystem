@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ManageVenuesController"
+            style="-fx-background-color: #0f0f0f;">
+
+    <top>
+        <VBox spacing="14" style="-fx-background-color: #111111;">
+            <padding>
+                <Insets top="18" right="20" bottom="18" left="20"/>
+            </padding>
+
+            <Label text="Manage Venues"
+                   style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <!-- INPUT ROW -->
+            <HBox spacing="10">
+
+                <TextField fx:id="venueIdField" promptText="Venue ID"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <TextField fx:id="venueNameField" promptText="Venue Name"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <TextField fx:id="cityField" promptText="City"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <TextField fx:id="capacityField" promptText="Capacity"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <TextField fx:id="latitudeField" promptText="Latitude"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <TextField fx:id="longitudeField" promptText="Longitude"
+                           style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-background-radius: 10;"/>
+
+                <Button text="Add"
+                        onAction="#handleAddVenue"
+                        style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);
+                               -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+                <Button text="Back"
+                        onAction="#goBack"
+                        style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-background-radius: 10;"/>
+            </HBox>
+
+            <Label fx:id="statusLabel" style="-fx-text-fill: #ff5252;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background: #0f0f0f;">
+            <content>
+                <VBox fx:id="venueContainer" spacing="16"
+                      style="-fx-background-color: #0f0f0f;">
+                    <padding>
+                        <Insets top="20" right="20" bottom="20" left="20"/>
+                    </padding>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

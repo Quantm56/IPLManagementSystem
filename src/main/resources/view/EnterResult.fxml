@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.EnterResultController"
+      alignment="CENTER"
+      spacing="14"
+      style="-fx-background-color: linear-gradient(to bottom, #0b0b0b, #161616);">
+
+    <padding>
+        <Insets top="35" right="40" bottom="35" left="40"/>
+    </padding>
+
+    <Label text="Enter Match Result"
+           style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <ComboBox fx:id="matchBox" promptText="Select Match" maxWidth="340"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white;"/>
+
+    <ComboBox fx:id="winnerBox" promptText="Select Winner" maxWidth="340"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white;"/>
+
+    <TextArea fx:id="resultField"
+              promptText="Result text"
+              prefHeight="140"
+              maxWidth="340"
+              wrapText="true"
+              style="-fx-background-color: #1f1f1f; -fx-text-fill: white; -fx-prompt-text-fill: #8c8c8c;"/>
+
+    <Button text="Save Result"
+            onAction="#handleSaveResult"
+            maxWidth="340"
+            style="-fx-background-color: #ab47bc; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+    <Button text="Back"
+            onAction="#goBack"
+            maxWidth="340"
+            style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+
+    <Label fx:id="statusLabel"
+           maxWidth="340"
+           wrapText="true"
+           style="-fx-text-fill: #ff5252;"/>
+</VBox>

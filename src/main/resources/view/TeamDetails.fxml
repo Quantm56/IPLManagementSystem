@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.TeamDetailsController"
+            style="-fx-background-color: #0f0f0f;">
+
+    <top>
+        <HBox spacing="10" style="-fx-background-color:#111; -fx-padding:15;">
+            <Label text="Team Details"
+                   style="-fx-text-fill:white; -fx-font-size:20px; -fx-font-weight:bold;"/>
+
+            <Button text="Back"
+                    onAction="#goBack"
+                    style="-fx-background-color:#2b2b2b; -fx-text-fill:white;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding:20;">
+            <Label fx:id="teamName"
+                   style="-fx-text-fill:white; -fx-font-size:22px;"/>
+
+            <Label fx:id="coach"
+                   style="-fx-text-fill:#ccc;"/>
+
+            <Label fx:id="captain"
+                   style="-fx-text-fill:#ccc;"/>
+        </VBox>
+    </center>
+
+</BorderPane>

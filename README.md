@@ -30,6 +30,7 @@ IPL_Project/
 │   │       └── view/            # JavaFX FXML view templates
 │   └── test/                    # Unit tests
 └── pom.xml                      # Maven dependency configuration
+```
 
 ## How to Run
 
